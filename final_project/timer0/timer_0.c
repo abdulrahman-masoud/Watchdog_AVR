@@ -18,6 +18,6 @@ void timer_0_init(void)
 //    TCCR0B = (1 << FOC0A) | (1 << FOC0B);
     TCCR0B = (1 << CS02) | (1 << CS00); // pre-scaler = 1024
 
-    OCR0A = 155; // Interrupt Every 20ms
+    OCR0A = 77; // Interrupt Every 20ms
     TIMSK0 |= (1 << OCIE0A); // Enable CTCA interrupt
 }

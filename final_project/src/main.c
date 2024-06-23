@@ -6,19 +6,21 @@
  */
 
 
-#include"../gpio/gpio.h"
-#include"../timer0/timer_0.h"
-#include"../lib/std_Types.h"
-//#include <avr/io.h>
-#include <avr/interrupt.h>
-
-#define F_CPU 8000000UL
+#include "../gpio/gpio.h"
+#include "../timer0/timer_0.h"
+#include "../lib/std_Types.h"
+#include "../lib/utils.h"
 #include <util/delay.h>
+
+#define SREG REG8(0x5F)
+
 extern uint32 led_timer;
+
 int main(void){
 
 
-	SREG |= (1<<7);
+	SREG = (1<<7);
+
 	GPIO_Init(PORT_B, 0,OUTPUT);
 //	timer_1_init();
 	timer_0_init();
