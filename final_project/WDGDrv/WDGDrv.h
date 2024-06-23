@@ -11,5 +11,5 @@
 
 
 void WDGDrv_init(void);
-
+void WDGDrv_IsrNotification(void);
 #endif /* WDGDRV_WDGDRV_H_ */

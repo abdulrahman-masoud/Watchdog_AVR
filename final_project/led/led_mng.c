@@ -7,7 +7,7 @@
 #include"led_mng.h"
 #include"../gpio/gpio.h"
 #include"util/delay.h"
-
+#include"../WDGM/WDGM.h"
 #define LED_PORT 'B'
 #define LED_PIN  0
 #define LED_ON 1
@@ -36,4 +36,5 @@ void LED_Manage(void){
         led_timer = 0;
     }
 	led_timer += 10;
+	WDGM_AlivenessIndication();
 }
