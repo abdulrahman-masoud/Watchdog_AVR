@@ -1,6 +1,12 @@
-#ifndef TIMER_0_PRIVATE_H_
-#define TIMER_0_PRIVATE_H_
+/*
+ * timer_0_private.h
+ *
+ *  Created on: Jun 23, 2024
+ *      Author: DELL
+ */
 
+#ifndef TIMER0_TIMER_0_PRIVATE_H_
+#define TIMER0_TIMER_0_PRIVATE_H_
 #include "../lib/utils.h"
 
 #define TCCR0A REG8(0x44)
@@ -34,4 +40,5 @@
 #define OCR0B REG8(0x48)
 
 
-#endif /* TIMER_0_PRIVATE_H_ */
+
+#endif /* TIMER0_TIMER_0_PRIVATE_H_ */

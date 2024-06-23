@@ -13,9 +13,9 @@
 #define LED_ON 1
 #define LED_OFF 0
 
-#define LED_BLINK_PERIOD 500
+#define LED_BLINK_PERIOD 20
 
-uint32 led_timer = 0;
+uint32 led_timer ;
 uint8 led_state = LED_ON;
 
 void LED_init(uint8 LED_port,uint8 LED_pin){

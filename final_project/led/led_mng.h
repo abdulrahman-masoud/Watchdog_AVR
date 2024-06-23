@@ -9,5 +9,6 @@
 #define LED_LED_MNG_H_
 
 
-
+void LEDM_init(void);
+void LEDM_manage(void);
 #endif /* LED_LED_MNG_H_ */
