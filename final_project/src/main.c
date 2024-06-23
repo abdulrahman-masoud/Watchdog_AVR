@@ -21,7 +21,6 @@
 //#define SREG REG8(0x5F)
 
 ISR(TIMER0_COMPA_vect){
-	tick++;
 	TOGGLE_BIT(PORTD,1);
 	WDGM_MainFunction();
 }
@@ -31,8 +30,10 @@ ISR(TIMER1_COMPA_vect){
 }
 
 int main(void){
-
-
+	GPIO_Init(PORT_D, 5, OUTPUT);
+	GPIO_Init(PORT_C, 0, OUTPUT);
+	GPIO_Init(PORT_C, 1, OUTPUT);
+	GPIO_Write(PORT_D, 5, HIGH);
 	SREG = (1<<7);
 	WDGDrv_init();
 	WDGM_Init();
