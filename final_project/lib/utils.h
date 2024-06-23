@@ -11,4 +11,5 @@
 
 #include "Std_Types.h"
 #define REG8(ADDR)  (*(uint8 *)(ADDR))
+#define REG16(ADDR)  (*(uint16 *)(ADDR))
 #endif /* LIB_UTILS_H_ */
