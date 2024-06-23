@@ -16,14 +16,17 @@
 #include"../timer_1/timer_1.h"
 #include"../led/led_mng.h"
 #include<avr/interrupt.h>
-
+#include"../lib/Bit_Operations.h"
+#include "../gpio/Gpio_private.h"
 //#define SREG REG8(0x5F)
 
 ISR(TIMER0_COMPA_vect){
 	tick++;
+	TOGGLE_BIT(PORTD,1);
 	WDGM_MainFunction();
 }
 ISR(TIMER1_COMPA_vect){
+	TOGGLE_BIT(PORTD,2);
 	WDGDrv_IsrNotification();
 }
 
@@ -40,7 +43,7 @@ int main(void){
 	while(1){
 
 		LEDM_Manage();
-		_delay_ms(10);
+		_delay_ms(5);
 
 	}
 
