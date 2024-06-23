@@ -1,5 +1,12 @@
-#ifndef STD_TYPES_H
-#define STD_TYPES_H
+/*
+ * std_Types.h
+ *
+ *  Created on: Jun 23, 2024
+ *      Author: DELL
+ */
+
+#ifndef LIB_STD_TYPES_H_
+#define LIB_STD_TYPES_H_
 
 typedef signed char         sint8;          /*        -128 .. +127            */
 typedef unsigned char       uint8;          /*           0 .. 255             */
@@ -14,5 +21,4 @@ typedef double              float64;        /* 2.2250738585072015e-308 to 1.7976
 
 typedef unsigned char       boolean;        /* for use with TRUE/FALSE        */
 
-
-#endif /* STD_TYPES_H */
+#endif /* LIB_STD_TYPES_H_ */

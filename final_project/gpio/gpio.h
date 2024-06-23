@@ -1,13 +1,13 @@
 /*
-    Gpio.h 
-    This file to handle Gpio for the ATmega328P
+ * gpio.h
+ *
+ *  Created on: Jun 23, 2024
+ *      Author: DELL
+ */
 
-    Auther: Abdulrahman Masoud
-
-*/
-
-#ifndef GPIO_H
-#define GPIO_H
+#ifndef GPIO_GPIO_H_
+#define GPIO_GPIO_H_
+#include "../lib/std_Types.h"
 
 #define OUTPUT 1
 #define INPUT 0
@@ -21,13 +21,11 @@
 
 
 
-#include "Std_Types.h"
+
 
 
 void GPIO_Init(uint8 port, uint8 pin,uint8 direction);
 void GPIO_Write(uint8 port, uint8 pin, uint8 value);
 
 
-
-
-#endif /* GPIO_H */
+#endif /* GPIO_GPIO_H_ */

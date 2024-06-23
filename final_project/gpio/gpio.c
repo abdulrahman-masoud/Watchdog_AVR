@@ -1,6 +1,14 @@
+/*
+ * gpio.c
+ *
+ *  Created on: Jun 23, 2024
+ *      Author: DELL
+ */
+
+
 #include "Gpio.h"
 #include "Gpio_private.h"
-#include "Bit_Operations.h"
+#include "../lib/Bit_Operations.h"
 
 void GPIO_Init(uint8 port, uint8 pin,uint8 direction)
 {

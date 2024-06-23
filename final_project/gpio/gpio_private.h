@@ -1,14 +1,13 @@
 /*
-    Gpio_private.h
-    This file to handle Gpio for the ATmega328P
+ * gpio_private.h
+ *
+ *  Created on: Jun 23, 2024
+ *      Author: DELL
+ */
 
-    Auther: Abdulrahman Masoud
-*/
-
-#ifndef GPIO_PRIVATE_H
-#define GPIO_PRIVATE_H
-
-#include "Lib/Utils.h"
+#ifndef GPIO_GPIO_PRIVATE_H_
+#define GPIO_GPIO_PRIVATE_H_
+#include "../lib/utils.h"
 
 // Define register addresses for ATmega328P
 
@@ -25,4 +24,4 @@
 #define PIND  REG8(0x29)
 
 
-#endif /* GPIO_PRIVATE_H */
+#endif /* GPIO_GPIO_PRIVATE_H_ */
