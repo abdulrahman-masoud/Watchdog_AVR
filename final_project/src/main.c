@@ -14,7 +14,7 @@
 
 #define F_CPU 8000000UL
 #include <util/delay.h>
-extern uint32 led_timer;
+
 int main(void){
 
 
@@ -24,8 +24,8 @@ int main(void){
 	timer_0_init();
 
 	while(1){
-//		LED_Manage();
-//		_delay_ms(10);
+		LED_Manage();
+		_delay_ms(10);
 	}
 
 		
@@ -35,7 +35,7 @@ int main(void){
 
 ISR(TIMER0_COMPA_vect){
 	GPIO_Write(PORT_B,0,LOW);
-//	led_timer += 20;
+	
 }
 //ISR(TIMER1_COMPA_vect){
 //	GPIO_Write(PORT_B,0,LOW);
