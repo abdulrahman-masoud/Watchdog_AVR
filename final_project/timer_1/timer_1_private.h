@@ -33,11 +33,11 @@
 
 #define TCNT1H REG8(0x85)
 #define TCNT1L REG8(0x84)
-#define TCNT1 REG16(0x85)
+#define TCNT1 REG16(0x84)
 
 #define OCR1AH REG8(0x89)
 #define OCR1AL REG8(0x88)
-#define OCR1A REG16(0x89)
+#define OCR1A REG16(0x88)
 
 #define TIMSK1 REG8(0x6F)
 #define OCIE1A  1

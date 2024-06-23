@@ -43,7 +43,7 @@ int main(void){
 	while(1){
 
 		LEDM_Manage();
-		_delay_ms(5);
+		_delay_ms(10);
 
 	}
 
