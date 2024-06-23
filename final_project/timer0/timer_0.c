@@ -14,7 +14,7 @@ void timer_0_init(void)
 {
     TCNT0 = 0;
 
-    TCCR0A = (1 << WGM01);
+    TCCR0A |= (1 << WGM01) | (1<<COM0A1);
 //    TCCR0B = (1 << FOC0A) | (1 << FOC0B);
     TCCR0B = (1 << CS02) | (1 << CS00); // pre-scaler = 1024
 

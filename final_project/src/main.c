@@ -20,7 +20,7 @@ int main(void){
 
 	SREG |= (1<<7);
 	GPIO_Init(PORT_B, 0,OUTPUT);
-	timer_1_init();
+//	timer_1_init();
 	timer_0_init();
 
 	while(1){
