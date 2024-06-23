@@ -10,5 +10,5 @@
 
 
 void LEDM_init(void);
-void LEDM_manage(void);
+void LEDM_Manage(void);
 #endif /* LED_LED_MNG_H_ */

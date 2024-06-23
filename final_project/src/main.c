@@ -11,23 +11,37 @@
 #include "../lib/std_Types.h"
 #include "../lib/utils.h"
 #include <util/delay.h>
+#include"../WDGM/WDGM.h"
+#include"../WDGDrv/WDGDrv.h"
+#include"../timer_1/timer_1.h"
+#include"../led/led_mng.h"
+#include<avr/interrupt.h>
 
+//#define SREG REG8(0x5F)
 
-#define SREG REG8(0x5F)
-
+ISR(TIMER0_COMPA_vect){
+	tick++;
+	WDGM_MainFunction();
+}
+ISR(TIMER1_COMPA_vect){
+	WDGDrv_IsrNotification();
+}
 
 int main(void){
 
 
 	SREG = (1<<7);
-
-	GPIO_Init(PORT_B, 0,OUTPUT);
-//	timer_1_init();
+	WDGDrv_init();
+	WDGM_Init();
+	LEDM_init();
+	timer_1_init();
 	timer_0_init();
 
 	while(1){
-		LED_Manage();
+
+		LEDM_Manage();
 		_delay_ms(10);
+
 	}
 
 		
@@ -35,12 +49,5 @@ int main(void){
 }
 
 
-ISR(TIMER0_COMPA_vect){
-	GPIO_Write(PORT_B,0,LOW);
-	
-}
-//ISR(TIMER1_COMPA_vect){
-//	GPIO_Write(PORT_B,0,LOW);
-//}
-//
+
 

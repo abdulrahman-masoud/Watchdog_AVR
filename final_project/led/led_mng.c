@@ -18,11 +18,12 @@
 uint32 led_timer=10;
 uint8 led_state = LED_ON;
 
-void LED_init(uint8 LED_port,uint8 LED_pin){
-	GPIO_Init(LED_port, LED_pin,OUTPUT);
+void LEDM_init(void){
+	GPIO_Init(PORT_B, 0,OUTPUT);
+
 }
 
-void LED_Manage(void){
+void LEDM_Manage(void){
 	
     if (led_timer >= LED_BLINK_PERIOD){
         if (led_state == LED_ON){
