@@ -20,11 +20,6 @@
 uint32 led_timer=10;
 uint8 led_state = LED_OFF;
 
-
-/*
-	 * Description: This function is responsible for initializing the LEDs
-
-*/
 void LEDM_init(void){
 	GPIO_Init();
 	GPIO_Write(PORT_B,0,LOW);
@@ -34,12 +29,6 @@ void LEDM_init(void){
 	GPIO_Write(PORT_D,3,LOW);
 }
 
-
-/*
-	 * Description: This function is responsible for managing the LEDs
-	 * The LED will blink every 500ms
-
-*/
 void LEDM_Manage(void){
 	TOGGLE_BIT(PORTD,0);
     if (led_timer >= LED_BLINK_PERIOD){

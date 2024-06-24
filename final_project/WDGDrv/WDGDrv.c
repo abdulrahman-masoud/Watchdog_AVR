@@ -16,19 +16,11 @@
 #include "../gpio/gpio.h"
 
 
-
-/*
-	* Description: This function is responsible for initializing the Watchdog Timer
-*/
 void WDGDrv_init(void){
 	WDTCSR = (1<<WDCE) | (1<<WDE) | (1<<WDP1);
 	WDTCSR = (1<<WDE) | (1<<WDP1);
 }
 
-/*
-	* Description: This function is responsible for notifying the Watchdog Timer that the system is still running
-	and resetting the Watchdog Timer to avoid the system reset
-*/
 void WDGDrv_IsrNotification(void){
 	WDGM_StatusType status = WDGM_PovideSuppervisionStatus();
 
