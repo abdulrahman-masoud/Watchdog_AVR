@@ -28,6 +28,6 @@ void WDGDrv_IsrNotification(void){
 	}
 	if(not_stuck == OK && status == OK){
 		TOGGLE_BIT(PORTC, 1);
-		wdt_reset();
 	}
+		wdt_reset();
 }

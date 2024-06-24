@@ -51,6 +51,6 @@ void LEDM_Manage(void){
         led_timer = 0;
     }
 	led_timer += 10;
-//	WDGM_AlivenessIndication();
+	WDGM_AlivenessIndication();
 
 }
