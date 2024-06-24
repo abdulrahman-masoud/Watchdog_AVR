@@ -26,18 +26,12 @@ uint8 led_state = LED_OFF;
 
 */
 void LEDM_init(void){
-	GPIO_Init(PORT_B, 0,OUTPUT);
-	GPIO_Init(PORT_D, 0,OUTPUT);
-	GPIO_Init(PORT_D, 1,OUTPUT);
-	GPIO_Init(PORT_D, 2,OUTPUT);
-	GPIO_Init(PORT_D, 3,OUTPUT);
-
+	GPIO_Init();
 	GPIO_Write(PORT_B,0,LOW);
 	GPIO_Write(PORT_D,0,LOW);
 	GPIO_Write(PORT_D,1,LOW);
 	GPIO_Write(PORT_D,2,LOW);
 	GPIO_Write(PORT_D,3,LOW);
-
 }
 
 
