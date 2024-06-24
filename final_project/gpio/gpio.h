@@ -24,7 +24,8 @@
 
 
 
-void GPIO_Init(uint8 port, uint8 pin,uint8 direction);
+void GPIO_Init();
+void GPIO_Init_Pin(uint8 port, uint8 pin,uint8 direction);
 void GPIO_Write(uint8 port, uint8 pin, uint8 value);
 
 

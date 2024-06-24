@@ -17,22 +17,12 @@
 
 #define LED_BLINK_PERIOD 500
 
-uint32 led_timer=10;
-uint8 led_state = LED_OFF;
+uint32 led_timer;
+uint8 led_state;
 
 void LEDM_init(void){
-	GPIO_Init(PORT_B, 0,OUTPUT);
-	GPIO_Init(PORT_D, 0,OUTPUT);
-	GPIO_Init(PORT_D, 1,OUTPUT);
-	GPIO_Init(PORT_D, 2,OUTPUT);
-	GPIO_Init(PORT_D, 3,OUTPUT);
-
-	GPIO_Write(PORT_B,0,LOW);
-	GPIO_Write(PORT_D,0,LOW);
-	GPIO_Write(PORT_D,1,LOW);
-	GPIO_Write(PORT_D,2,LOW);
-	GPIO_Write(PORT_D,3,LOW);
-
+	led_timer = 0;
+	led_state = LED_OFF;
 }
 
 void LEDM_Manage(void){

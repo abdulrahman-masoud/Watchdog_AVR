@@ -31,10 +31,9 @@ ISR(TIMER1_COMPA_vect){
 }
 
 int main(void){
-	GPIO_Init(PORT_D, 5, OUTPUT);
-	GPIO_Init(PORT_C, 0, OUTPUT);
-	GPIO_Init(PORT_C, 1, OUTPUT);
-	GPIO_Write(PORT_D, 5, HIGH);
+	
+	GPIO_Init();
+	
 	SREG = (1<<7);
 	WDGDrv_init();
 	WDGM_Init();
