@@ -1,4 +1,9 @@
-
+/*
+ * gpio.h
+ *
+ *  Created on: Jun 23, 2024
+ *      Author: DELL
+ */
 
 #ifndef GPIO_GPIO_H_
 #define GPIO_GPIO_H_
@@ -19,7 +24,7 @@
 
 
 
-void GPIO_Init();
+void GPIO_Init(uint8 port, uint8 pin,uint8 direction);
 void GPIO_Write(uint8 port, uint8 pin, uint8 value);
 
 
