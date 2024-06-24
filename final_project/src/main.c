@@ -6,11 +6,12 @@
  */
 
 
+#include <util/delay.h>
+
 #include "../gpio/gpio.h"
 #include "../timer0/timer_0.h"
 #include "../lib/std_Types.h"
 #include "../lib/utils.h"
-#include <util/delay.h>
 #include"../WDGM/WDGM.h"
 #include"../WDGDrv/WDGDrv.h"
 #include"../timer_1/timer_1.h"
