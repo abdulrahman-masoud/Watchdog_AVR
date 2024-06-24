@@ -23,11 +23,12 @@ void WDGDrv_init(void){
 
 void WDGDrv_IsrNotification(void){
 	WDGM_StatusType status = WDGM_PovideSuppervisionStatus();
-	if(not_stuck == OK && status == NOK){
-		TOGGLE_BIT(PORTC, 0);
-	}
+
 	if(not_stuck == OK && status == OK){
 		TOGGLE_BIT(PORTC, 1);
 		wdt_reset();
+	}else{
+		TOGGLE_BIT(PORTC, 0);
+		wdt_enable(WDTO_15MS);
 	}
 }

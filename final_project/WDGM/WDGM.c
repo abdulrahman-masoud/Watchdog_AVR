@@ -8,7 +8,7 @@
 
 void WDGM_Init(void){
 	counter = 0 ;
-	status = NOK;
+	status = OK;
 	tick = 0;
 	not_stuck = NOK;
 }
